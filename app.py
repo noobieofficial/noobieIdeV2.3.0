@@ -620,39 +620,39 @@ def examples():
     examples = [
         {
             'name': 'Hello World',
-            'description': 'Stampa un messaggio',
-            'code': 'say "Hello, World!\\n"'
+            'description': 'Print a message',
+            'code': 'say "Hello, World!" end'
         },
         {
-            'name': 'Variabili',
-            'description': 'Crea e usa variabili',
-            'code': '''create STR name "Alice"
-create INT age 25
-say "Nome: " @name "\\n"
-say "Età: " @age "\\n"'''
+            'name': 'Variables',
+            'description': 'Initialize variables',
+            'code': '''create str name "Alice"
+create int age 25
+say "Name: " name end
+say "Age: " age end'''
         },
         {
             'name': 'Input',
-            'description': 'Legge input dall\'utente',
-            'code': '''listen STR nome "Come ti chiami? "
-say "Ciao, " @nome "!\\n"'''
+            'description': 'Read input from the user',
+            'code': '''listen str nome "What's your name? "
+say "Hi, " nome "!" end '''
         },
         {
-            'name': 'Condizioni',
-            'description': 'Usa if/else',
-            'code': '''create INT x 10
-if @x > 5 DO
-    say "x è maggiore di 5\\n"
+            'name': 'Condition',
+            'description': 'Use if/else',
+            'code': '''create int x 10
+if x > 5 DO
+    say "x is less then 5" end
 else
-    say "x è minore o uguale a 5\\n"
+    say "x is greater or equal 5" end
 endo'''
         },
         {
             'name': 'Loop',
-            'description': 'Usa while',
-            'code': '''create INT i 1
-while @i <= 5 DO
-    say "Iterazione " @i "\\n"
+            'description': 'Use while',
+            'code': '''create int i 1
+while i <= 5 DO
+    say "I is equal to: " i end
     increment i
 endo'''
         }
